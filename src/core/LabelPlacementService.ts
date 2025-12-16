@@ -22,7 +22,6 @@ export class LabelPlacemetService {
                 bestScore = score
             }
            }
-           console.log(bestScore, bestLabel)
            if (bestLabel)
               labels.push(bestLabel)
         }

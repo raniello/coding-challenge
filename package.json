@@ -7,7 +7,8 @@
     "dev": "vite",
     "test": "vitest",
     "test:run": "vitest run",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "start": "tsc && node ./dist/main.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,8 @@
     "vitest": "^4.0.15"
   },
   "dependencies": {
-    "@turf/turf": "^7.3.1"
+    "@turf/turf": "^7.3.1",
+    "prompt-sync": "^4.2.0",
+    "ts-node": "^10.9.2"
   }
 }
