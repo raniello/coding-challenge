@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "strict": true,            // Fondamentale: abilita tutti i controlli rigidi
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "types": ["vitest/globals"] // Opzionale: se vuoi usare describe/it senza importarli
+  },
+  "include": ["src"]
+}
