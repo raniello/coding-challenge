@@ -59,7 +59,7 @@ export class Polyline {
                 residualSegment = new Segment(point, residualSegment.end)
                 nextSplittingPointDistance = distanceBetweenSplittingPoints
             }
-            nextSplittingPointDistance -= segment.getLength()
+            nextSplittingPointDistance -= residualSegment.getLength()
         }
     }
 
