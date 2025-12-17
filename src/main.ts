@@ -1,15 +1,22 @@
 import readline from 'readline';
 import { stdin as input, stdout as output } from 'node:process';
-import { Polyline } from './core/Polyline.js';
-import { Point } from './core/Point.js';
-import { LabelPlacemetService } from './core/LabelPlacementService.js';
+import { Polyline } from './core/Polyline';
+import { Point } from './core/Point';
+import { LabelPlacemetService } from './core/LabelPlacementService';
 
 async function main() {
   const rl = readline.createInterface({ input, output });
   const lines: string[] = [];
 
   for await (const line of rl) {
-    lines.push(line); 
+    if (line?.trim().length > 0){
+
+      lines.push(line); 
+    }
+    else {
+
+      break
+    }
   }
 
   rl.close()
@@ -28,8 +35,8 @@ async function main() {
 
 function *makePoints(list: number[]): Generator<Point> {
     while (list.length > 0){
-        const x = list.unshift()
-        const y = list.unshift()
+        const x = list.shift()!
+        const y = list.shift()!
         yield new Point(x, y)
     }
 }
